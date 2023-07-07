@@ -1,11 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Inter } from "next/font/google";
+import { Inter, Roboto_Flex } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const dynamicParams = false;
+const roboto = Roboto_Flex({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Home | FunkoShop",
@@ -19,10 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} + ${roboto.className} `}>
         <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );
