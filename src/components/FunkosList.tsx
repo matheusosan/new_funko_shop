@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import funkos from "@/services/api";
-import useAlert from "@/app/hooks/useAlert";
+import useAlert from "@/hooks/useAlert";
 import * as I from "react-icons/bs";
 import Alert from "./Alert";
 

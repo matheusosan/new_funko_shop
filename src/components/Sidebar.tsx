@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import * as I from "react-icons/fa";
 import { useShoppingCart, useSidebar } from "@/state/index";
 import ProductsLIst from "./explore/ProductsLIst";
@@ -11,7 +12,13 @@ const Sidebar = () => {
 
   return (
     <>
-      <aside className="flex flex-col justify-between w-[500px] fixed right-0 top-0 h-screen bg-white">
+      <motion.aside
+        className="flex flex-col justify-between w-[500px] fixed right-0 top-0 h-screen bg-white"
+        initial={{ opacity: 0, right: "-100%" }}
+        animate={{ opacity: 1, right: 0 }}
+        transition={{ duration: 0.4 }}
+        exit={{ opacity: 0, right: "-100%" }}
+      >
         <div className="flex flex-col">
           <div className="flex items-center">
             <button
@@ -46,7 +53,7 @@ const Sidebar = () => {
             <h2>Seu carrinho está vazio.</h2>
           </div>
         )}
-      </aside>
+      </motion.aside>
     </>
   );
 };

@@ -3,6 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
+import { AnimatePresence } from "framer-motion";
+
 import * as I from "react-icons/bs";
 import { useSidebar } from "@/state";
 
@@ -23,7 +25,7 @@ const Header = () => {
         color="white"
       />
 
-      {isOpen && <Sidebar />}
+      <AnimatePresence>{isOpen && <Sidebar />}</AnimatePresence>
     </header>
   );
 };
