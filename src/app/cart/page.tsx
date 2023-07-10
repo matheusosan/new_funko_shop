@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import React from "react";
 import { useShoppingCart } from "@/state/shoppingCartStore";
 import { BsTrashFill } from "react-icons/bs";
-import React from "react";
 
 const Page = () => {
   const { cart, incrementQuantity, decrementQuantity, removeItem } =

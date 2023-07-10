@@ -12,13 +12,13 @@ const useAlert = () => {
 
   const handleAddItem = (item: IFunkos) => {
     addItem(item);
-    setAlertMessage(`Produto adicionado ao carrinho.`);
+    setAlertMessage(`Produto Adicionado ao Carrinho.`);
     setShowAlert(true);
 
     setTimeout(() => {
       setShowAlert(false);
       setAlertMessage("");
-    }, 5000);
+    }, 3000);
   };
 
   const handleRemoveItem = (item: IFunkos) => {
@@ -29,7 +29,7 @@ const useAlert = () => {
     setTimeout(() => {
       setShowAlert(false);
       setAlertMessage("");
-    }, 5000);
+    }, 3000);
   };
 
   return {

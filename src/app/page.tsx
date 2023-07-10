@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Button from "@/components/Button";
 import Image from "next/image";
 
 export default function Home() {
@@ -26,7 +28,7 @@ export default function Home() {
       </div>
 
       <div className="flex items-center justify-center w-5/12">
-        <div className="flex flex-col flex-1 gap-4">
+        <div className="flex flex-col items-start flex-1 gap-4">
           <h2 className="text-2xl font-bold leading-tight">
             Descubra heróis, vilões, celebridades, criaturas e muito mais!
           </h2>
@@ -34,14 +36,19 @@ export default function Home() {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ab
             accusantium facilis quas iste est ducimus ea sequi obcaecati aut?
           </p>
-          <button className="">Descubra</button>
+          <Link href="/explore">
+            <Button
+              className="bg-blue-700 py-3 px-4 rounded-lg text-xs font-bold text-white"
+              content="DESCUBRA"
+            />
+          </Link>
         </div>
         <div className="flex flex-1 justify-center">
           <Image
             height={1280}
             width={920}
-            className="w-[165px] h-[250px]"
-            src="https://matheus-nodebucket.s3.us-east-2.amazonaws.com/funkoshop/godfather.png"
+            className="w-[300px] h-[250px]"
+            src="https://matheus-nodebucket.s3.us-east-2.amazonaws.com/funkoshop/img2.png"
             alt=""
           />
         </div>

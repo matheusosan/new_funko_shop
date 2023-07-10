@@ -33,7 +33,7 @@ const ProductsLIst = () => {
                   </button>
                 </span>
                 <p className="font-bold">
-                  R${product.item.price * product.quantity}
+                  R${(product.item.price * product.quantity).toFixed(2)}
                 </p>
               </div>
             </div>

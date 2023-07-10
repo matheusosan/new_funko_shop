@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Inter, Roboto_Flex } from "next/font/google";
 import "./globals.css";
 
