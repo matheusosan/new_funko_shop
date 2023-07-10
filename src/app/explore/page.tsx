@@ -8,7 +8,7 @@ export const metadata = {
 const page = () => {
   return (
     <div className="flex items-center justify-center my-20">
-      <div className="grid grid-cols-4 gap-12 w-3/4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 w-3/4">
         <FunkosList />
       </div>
     </div>

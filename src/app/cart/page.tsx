@@ -10,7 +10,7 @@ const Page = () => {
     useShoppingCart();
 
   return (
-    <div className="flex items-center justify-center h-auto">
+    <div className="flex items-center justify-center h-full">
       {cart.length >= 1 ? (
         <div className="flex flex-col w-[760px]">
           {cart.map((product) => (

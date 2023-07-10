@@ -26,10 +26,10 @@ const Page = async ({ params }: { params: { id: string } }) => {
   console.log(data);
 
   return (
-    <div className="flex items-center justify-center gap-40 h-full">
+    <div className="flex flex-col md:flex-row items-center justify-center md:gap-40 h-full">
       <div>
         <Image
-          className="h-[300px] w-[250px]"
+          className="h-[200px] w-[150px] md:h-[300px] md:w-[250px]"
           src={data.images.icon1}
           alt={data.title}
           width={920}

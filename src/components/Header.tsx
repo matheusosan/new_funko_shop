@@ -3,9 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
+import * as I from "react-icons/ai";
 import { AnimatePresence } from "framer-motion";
-
-import * as I from "react-icons/bs";
 import { useSidebar } from "@/state";
 
 const Header = () => {
@@ -19,11 +18,9 @@ const Header = () => {
       <Link className="text-white" href="/explore">
         Shop
       </Link>
-      <I.BsFillCartPlusFill
-        onClick={() => toggleSidebar()}
-        size={24}
-        color="white"
-      />
+      <button onClick={() => toggleSidebar()}>
+        <I.AiOutlineShoppingCart size={26} color="white" />
+      </button>
 
       <AnimatePresence>{isOpen && <Sidebar />}</AnimatePresence>
     </header>
