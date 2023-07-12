@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import * as I from "react-icons/fa";
 import { useShoppingCart, useSidebar } from "@/state/index";
-import ProductsLIst from "./explore/ProductsLIst";
+import SidebarProductList from "./SidebarProductsList";
 
 const Sidebar = () => {
   const { cart } = useShoppingCart();
@@ -30,10 +30,10 @@ const Sidebar = () => {
             >
               X
             </button>
-            <h2 className="ml-8 text-2xl">CARRINHO</h2>
+            <h2 className="ml-6 text-2xl">CARRINHO</h2>
           </div>
           <div className="overflow-y-auto h-[500px]">
-            {cart.length >= 1 && <ProductsLIst />}
+            {cart.length >= 1 && <SidebarProductList />}
           </div>
         </div>
 
@@ -64,9 +64,9 @@ const Sidebar = () => {
           </div>
         )}
         {cart.length <= 0 && (
-          <div className="flex flex-col items-center justify-center absolute right-1/2 translate-x-1/2 gap-8">
-            <I.FaShoppingCart size={64} color="#979899" />
-            <h2>Seu carrinho está vazio.</h2>
+          <div className="flex flex-col items-center justify-center absolute right-1/2 bottom-1/2 translate-y-1/2 translate-x-1/2 gap-8">
+            <I.FaShoppingCart size={64} color="#818283" />
+            <h2 className="text-lg">Seu carrinho está vazio.</h2>
           </div>
         )}
       </motion.aside>

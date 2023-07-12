@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProductDescription from "@/components/explore/id/ProductDescription";
+import GoBack from "@/components/explore/id/GoBack";
 import { IFunkos } from "@/types/app.types";
 
 export const dynamicParams = false;
@@ -23,10 +24,10 @@ async function getFunko({ params }: { params: { id: string } }) {
 
 const Page = async ({ params }: { params: { id: string } }) => {
   const data = await getFunko({ params });
-  console.log(data);
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center md:gap-40 h-full">
+    <div className="flex flex-col relative md:flex-row items-center justify-center md:gap-40 h-full">
+      <GoBack />
       <div>
         <Image
           className="h-[200px] w-[150px] md:h-[300px] md:w-[250px]"

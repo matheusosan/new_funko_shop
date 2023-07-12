@@ -24,3 +24,12 @@ export interface SidebarState {
   isOpen: boolean;
   toggleSidebar: () => void;
 }
+
+export interface DescriptionProps {
+  id: number;
+  title: string;
+  price: number;
+  images: {
+    icon1: string;
+  };
+}

@@ -5,10 +5,14 @@ const Footer = () => {
     <footer className="flex w-full items-center justify-center bg-blue-900 h-[5vh]">
       <p className=" text-lg text-white">
         Made by{" "}
-        <a href="" className="font-bold">
+        <a
+          href="https://linkedin.com/in/matheusosan"
+          target="_blank"
+          className="font-bold"
+        >
           Matheus
         </a>{" "}
-        with heart.
+        with 🤍.
       </p>
     </footer>
   );

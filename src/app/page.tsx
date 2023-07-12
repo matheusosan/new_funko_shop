@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="bg-zinc-300 w-full min-h-screen h-auto flex flex-col items-center gap-32 py-24">
+    <main className="bg-zinc-200 w-full h-auto flex flex-col items-center gap-32 py-24">
       <div className="flex items-center justify-center w-5/12">
         <div className="flex flex-1 justify-center">
           <Image

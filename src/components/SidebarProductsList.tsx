@@ -3,7 +3,7 @@ import React from "react";
 import { useShoppingCart } from "@/state";
 import * as I from "react-icons/bs";
 
-const ProductsLIst = () => {
+const SidebarProductsList = () => {
   const { cart, decrementQuantity, incrementQuantity, removeItem } =
     useShoppingCart();
 
@@ -45,4 +45,4 @@ const ProductsLIst = () => {
   );
 };
 
-export default ProductsLIst;
+export default SidebarProductsList;

@@ -4,6 +4,7 @@
 import React from "react";
 import { useShoppingCart } from "@/state/shoppingCartStore";
 import { BsTrashFill } from "react-icons/bs";
+import Link from "next/link";
 
 const Page = () => {
   const { cart, incrementQuantity, decrementQuantity, removeItem } =
@@ -18,11 +19,13 @@ const Page = () => {
               className="flex items-center justify-around border-b-2 border-black"
               key={product.item.id}
             >
-              <img
-                className="w-[100px] h-[130px] cursor-pointer"
-                src={product.item.images.icon1}
-                alt={product.item.title}
-              />
+              <Link href={`/explore/${product.item.id}`}>
+                <img
+                  className="w-[100px] h-[130px] cursor-pointer"
+                  src={product.item.images.icon1}
+                  alt={product.item.title}
+                />
+              </Link>
               <div className="flex flex-col items-center">
                 <h2 className="font-bold">Produto</h2>
                 <p className="w-[200px] text-center">{product.item.title}</p>

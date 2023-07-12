@@ -1,17 +1,9 @@
 "use client";
 
-import Button from "@/components/Button";
 import React from "react";
+import Button from "@/components/Button";
 import useAlert from "@/hooks/useAlert";
-
-interface DescriptionProps {
-  id: number;
-  title: string;
-  price: number;
-  images: {
-    icon1: string;
-  };
-}
+import { DescriptionProps } from "@/types/app.types";
 
 const ProductDescription = ({ id, title, price, images }: DescriptionProps) => {
   const { handleAddItem } = useAlert();
