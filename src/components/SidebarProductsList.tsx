@@ -37,7 +37,10 @@ const SidebarProductsList = () => {
                 </p>
               </div>
             </div>
-            <I.BsTrashFill onClick={() => removeItem(product.item)} />
+            <I.BsTrashFill
+              className="cursor-pointer"
+              onClick={() => removeItem(product.item)}
+            />
           </div>
         </div>
       ))}
