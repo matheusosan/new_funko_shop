@@ -1,3 +1,5 @@
+import Skeleton from "@/components/Skeletons/FunkoList";
+
 export default function Loading() {
-  return <h2>Carregando...</h2>;
+  return <Skeleton containers={10} />;
 }

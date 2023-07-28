@@ -1,50 +1,35 @@
-"use client";
-
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import funkos from "@/services/api";
-import useAlert from "@/hooks/useAlert";
-import * as I from "react-icons/bs";
-import Alert from "./Alert";
+import { Product } from "@/types/app.types";
+import AddToCartButton from "./AddToCartButton";
 
-const FunkosList = () => {
-  const { showAlert, alertMessage, handleAddItem } = useAlert();
+const fetchFunkos = async () => {
+  const response = await fetch("http://localhost:3000/funko");
+  return response.json();
+};
 
+const FunkosList = async () => {
+  const data: Product[] = await fetchFunkos();
+  console.log(data);
   return (
     <>
-      {funkos.map((funko, i) => (
+      {data.map((funko) => (
         <div
           className="flex flex-col items-center justify-between shadow-2xl rounded-2xl py-6 h-[400px]"
           key={funko.id}
         >
-          <Link href={`/explore/${String(funko.id)}`}>
-            <Image
-              width={1280}
-              height={920}
-              className="w-[120px] h-[200px] cursor-pointer"
-              src={funko.images.icon1}
-              alt={funko.title}
-            />
-          </Link>
+          <Image
+            width={920}
+            height={1280}
+            className="w-[120px] h-[200px] cursor-pointer"
+            src={funko.images[0].url}
+            alt={funko.title}
+          />
           <h2 className="font-bold text-center px-4">{funko.title}</h2>
           <p>R${funko.price}</p>
-          <button
-            onClick={() =>
-              handleAddItem({
-                id: funko.id,
-                images: funko.images,
-                price: funko.price,
-                title: funko.title,
-              })
-            }
-            className="bg-blue-900 py-2 px-12 rounded-lg"
-          >
-            <I.BsFillCartPlusFill className="text-white text-xl" />
-          </button>
+          <AddToCartButton itemToAdd={funko} />
         </div>
       ))}
-      {showAlert && <Alert message={alertMessage} />}
     </>
   );
 };

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import Sidebar from "./Sidebar";
+import Sidebar from "./Sidebar/Sidebar";
 import * as I from "react-icons/ai";
 import { AnimatePresence } from "framer-motion";
 import { useSidebar } from "@/state";

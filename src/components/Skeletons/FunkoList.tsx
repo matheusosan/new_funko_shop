@@ -3,13 +3,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const page = ({ containers }: any) => {
+const Skeleton = ({ containers }: { containers: number }) => {
   return (
-    <div className="flex items-center justify-center">
+    <>
       {[...Array(containers)].map((_, i) => (
         <div
           key={i}
-          className="flex flex-col items-center justify-between h-[400px] w-[300px] shadow-2xl rounded-2xl py-6"
+          className="flex flex-col items-center justify-between h-[400px] w-[273px] shadow-2xl rounded-2xl py-6"
         >
           <motion.div
             initial={{ opacity: "25%" }}
@@ -61,8 +61,8 @@ const page = ({ containers }: any) => {
           />
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
-export default page;
+export default Skeleton;

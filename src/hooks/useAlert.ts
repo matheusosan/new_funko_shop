@@ -1,7 +1,5 @@
-"use client";
-
 import { useShoppingCart } from "@/state/shoppingCartStore";
-import { IFunkos } from "@/types/app.types";
+import { Product } from "@/types/app.types";
 import { useState } from "react";
 
 const useAlert = () => {
@@ -10,7 +8,7 @@ const useAlert = () => {
   const [alertMessage, setAlertMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
 
-  const handleAddItem = (item: IFunkos) => {
+  const handleAddItem = (item: Product) => {
     addItem(item);
     setAlertMessage(`Produto Adicionado ao Carrinho.`);
     setShowAlert(true);
@@ -21,7 +19,7 @@ const useAlert = () => {
     }, 3000);
   };
 
-  const handleRemoveItem = (item: IFunkos) => {
+  const handleRemoveItem = (item: Product) => {
     removeItem(item);
     setAlertMessage(`Produto removido do carrinho.`);
     setShowAlert(true);

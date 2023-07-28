@@ -9,15 +9,28 @@ export interface IFunkos {
   };
 }
 
+export interface Product {
+  id: number;
+  title: string;
+  price: number;
+  description?: string;
+  images: Image[];
+}
+
+interface Image {
+  id?: number;
+  url: string;
+}
+
 export interface ShoppingCartState {
   cart: {
-    item: IFunkos;
+    item: Product;
     quantity: number;
   }[];
-  addItem: (item: IFunkos) => void;
-  removeItem: (item: IFunkos) => void;
-  incrementQuantity: (item: IFunkos) => void;
-  decrementQuantity: (item: IFunkos) => void;
+  addItem: (item: Product) => void;
+  removeItem: (item: Product) => void;
+  incrementQuantity: (item: Product) => void;
+  decrementQuantity: (item: Product) => void;
 }
 
 export interface SidebarState {
