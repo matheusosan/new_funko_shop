@@ -12,7 +12,7 @@ export interface IFunkos {
 export interface Product {
   id: number;
   title: string;
-  price: number;
+  price: string;
   description?: string;
   images: Image[];
 }
@@ -41,8 +41,11 @@ export interface SidebarState {
 export interface DescriptionProps {
   id: number;
   title: string;
-  price: number;
-  images: {
-    icon1: string;
-  };
+  price: string;
+  images: Image[];
+}
+
+interface ImagesProps {
+  id?: string;
+  url: string;
 }
