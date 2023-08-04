@@ -39,7 +39,10 @@ const Content = () => {
                         </button>
                       </span>
                       <p className="font-bold">
-                        R${(product.item.price * product.quantity).toFixed(2)}
+                        R$
+                        {(
+                          product.quantity * parseInt(product.item.price)
+                        ).toFixed(2)}
                       </p>
                     </div>
                   </div>
