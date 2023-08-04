@@ -1,23 +1,31 @@
 import React from "react";
-import {} from "@/types/app.types";
 import { useShoppingCart, useSidebar } from "@/state";
-import router from "next/router";
+import { useRouter } from "next/navigation";
 
 const Bottom = () => {
   const { cart } = useShoppingCart();
   const { toggleSidebar } = useSidebar();
+  const router = useRouter();
 
   return (
     <>
       {cart.length >= 1 && (
-        <div className="flex flex-col w-full items-center justify-center gap-4 py-6 px-8 border-t-2 border-slate-300/80">
+        <div
+          key={0}
+          className="flex flex-col w-full items-center justify-center gap-4 py-6 px-8 border-t-2 border-slate-300/80"
+        >
           <div className="flex justify-between w-full">
             <p>Subtotal</p>
             <p>R$600,00</p>
           </div>
           <div className="flex justify-between w-full">
             <p className="font-bold text-xl">Total</p>
-            <p className="font-bold text-xl">R$600,00</p>
+            <p className="font-bold text-xl">
+              R$
+              {cart.reduce((total, current) => {
+                return total + parseInt(current.item.price) * current.quantity;
+              }, 0)}
+            </p>
           </div>
           <div className="flex gap-6 w-full">
             <button
