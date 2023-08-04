@@ -1,23 +1,24 @@
 import Image from "next/image";
 import ProductDescription from "@/components/explore/id/ProductDescription";
 import GoBack from "@/components/explore/id/GoBack";
-import { IFunkos } from "@/types/app.types";
+import { Product } from "@/types/app.types";
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const funkos = await fetch("http://localhost:3333/funkos").then((res) =>
+  const products = await fetch("http://localhost:3000/funko").then((res) =>
     res.json()
   );
 
-  return funkos.map((funko: IFunkos) => ({
-    id: funko.id.toString(),
+  console.log(products);
+  return products.map((product: Product) => ({
+    id: String(product.id),
   }));
 }
 
 async function getFunko({ params }: { params: { id: string } }) {
-  const response = await fetch(`http://localhost:3333/funkos/${params.id}`);
-  const data: IFunkos = await response.json();
+  const response = await fetch(`http://localhost:3000/funko/${params.id}`);
+  const data: Product = await response.json();
 
   return data;
 }
@@ -31,7 +32,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
       <div>
         <Image
           className="h-[200px] w-[150px] md:h-[300px] md:w-[250px]"
-          src={data.images.icon1}
+          src={data.images[0].url}
           alt={data.title}
           width={920}
           height={480}
