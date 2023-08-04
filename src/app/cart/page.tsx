@@ -22,7 +22,7 @@ const Page = () => {
               <Link href={`/explore/${product.item.id}`}>
                 <img
                   className="w-[100px] h-[130px] cursor-pointer"
-                  src={product.item.images.icon1}
+                  src={product.item.images[0].url}
                   alt={product.item.title}
                 />
               </Link>
@@ -52,7 +52,10 @@ const Page = () => {
 
               <div className="flex flex-col items-center">
                 <h2 className="font-bold">Preço total</h2>
-                <p>R${(product.quantity * product.item.price).toFixed(2)}</p>
+                <p>
+                  R$
+                  {(product.quantity * parseInt(product.item.price)).toFixed(2)}
+                </p>
               </div>
 
               <BsTrashFill
