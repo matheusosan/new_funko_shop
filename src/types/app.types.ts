@@ -1,14 +1,3 @@
-export interface IFunkos {
-  id: number;
-  title: string;
-  price: number;
-  images: {
-    icon1: string;
-    icon2?: string;
-    icon3?: string;
-  };
-}
-
 export interface Product {
   id: number;
   title: string;
