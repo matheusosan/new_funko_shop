@@ -6,7 +6,7 @@ import { Product } from "@/types/app.types";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const products = await fetch("http://localhost:3000/funko").then((res) =>
+  const products = await fetch(`${process.env.DB_URL}/funko`).then((res) =>
     res.json()
   );
 
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 }
 
 async function getFunko({ params }: { params: { id: string } }) {
-  const response = await fetch(`http://localhost:3000/funko/${params.id}`);
+  const response = await fetch(`${process.env.DB_URL}/funko/${params.id}`);
   const data: Product = await response.json();
 
   return data;

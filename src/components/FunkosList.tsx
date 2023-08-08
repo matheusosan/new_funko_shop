@@ -5,7 +5,7 @@ import { Product } from "@/types/app.types";
 import AddToCartButton from "./AddToCartButton";
 
 const fetchFunkos = async () => {
-  const response = await fetch("http://localhost:3000/funko");
+  const response = await fetch(`${process.env.DB_URL}/funko`);
   return response.json();
 };
 

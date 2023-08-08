@@ -2,7 +2,7 @@
 
 import React from "react";
 import Button from "@/components/Button";
-import useAlert from "@/hooks/useAlert";
+import useAlert from "@/hooks/useHandleProducts";
 import { DescriptionProps } from "@/types/app.types";
 
 const ProductDescription = ({ id, title, price, images }: DescriptionProps) => {
