@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# FUNKO SHOP REMAKE
 
-First, run the development server:
+Refactor de um projeto antigo.
+## Stack utilizada
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+**Front-end:** NextJS 13, Typescript, TailwindCSS, Zustand.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Instalação
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Instale o projeto seguindo os seguintes passoss:
 
-## Learn More
+- Abra o terminal ou prompt de comando no seu computador.
 
-To learn more about Next.js, take a look at the following resources:
+- Tenha o NodeJS instalado em sua máquina.
+- No terminal ou prompt de comando, digite o seguinte comando para clonar o repositório ```git clone https://github.com/matheusosan/new_funko_shop.git ```
+- Navegue até a pasta do projeto utilizando o comando ``` cd new_funko_shop ```
+- Crie um arquivo .env na raiz do projeto e dentro cole o seguinte código: ```DB_URL="https://my-funkodb.onrender.com"```
+- Instale as dependências do projeto utilizando ```npm install ```
+- Rode a aplicação utilizando ```npm run dev```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    
+## Autores
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [@matheusosan](https://www.linkedin.com/in/matheusosan)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
