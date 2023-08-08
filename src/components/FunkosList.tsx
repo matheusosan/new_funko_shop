@@ -16,7 +16,7 @@ const FunkosList = async () => {
     <>
       {data.map((funko) => (
         <div
-          className="flex flex-col items-center justify-between shadow-2xl rounded-2xl py-6 h-[400px]"
+          className="flex flex-col items-center justify-between shadow-2xl rounded-2xl py-6 h-[400px] w-[250px]"
           key={funko.id}
         >
           <Link href={`/explore/${funko.id}`}>
