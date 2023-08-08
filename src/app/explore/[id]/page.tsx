@@ -10,7 +10,6 @@ export async function generateStaticParams() {
     res.json()
   );
 
-  console.log(products);
   return products.map((product: Product) => ({
     id: String(product.id),
   }));
