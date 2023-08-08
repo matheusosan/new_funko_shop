@@ -10,7 +10,7 @@ const GoBack = () => {
 
   return (
     <button
-      className="absolute top-1/2 left-1/2 md:top-1/4 md:left-1/4"
+      className="absolute top-2 left-2 md:top-1/4 md:left-1/4"
       onClick={() => push("/explore")}
     >
       <I.AiFillLeftCircle size={50} />
